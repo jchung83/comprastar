@@ -16,39 +16,39 @@ from selenium.webdriver.support.ui import WebDriverWait
 filepath = 'D:\GIT\shopstar\excel_data.xlsx'
 wb = load_workbook(filepath)
  
-def test(driver, numero_hoja):
-
+def test(driver, numero_de_hoja):
+ 
  nombre_hoja = "Hoja1"
  ws = wb[nombre_hoja]
 
 
  driver.implicitly_wait(10)   
- time.sleep(8)   
+ time.sleep(5)   
 
  items = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 ]
  
- j= 24 * numero_hoja
+ j= 24 * numero_de_hoja
 
  for i in items :
    
    elemnt1 = "null" # "text"+str(i)
-   elemnt2 = "null" # "text"+str(i)+"a"
-   elemnt = "null" #text"+str(i)+"b"
-   elemnt4 = "null" #"text"+str(i)+"c"
+   elemnt2 = "S/0" # "text"+str(i)+"a"
+   elemnt = "S/0" #text"+str(i)+"b"
+   elemnt4 = "S/0" #"text"+str(i)+"c"
 
    try:
        
        elemnt1= driver.find_element(By.XPATH, "/html[1]/body[1]/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/ul[1]/li["+str(i)+"]/div[1]/div[3]/h6[2]").text  # MODELO NOMBRE
        print("Modelo  "+elemnt1)
-       #time.sleep(2)
+      
        elemnt2= driver.find_element(By.XPATH, "/html[1]/body[1]/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/ul[1]/li["+str(i)+"]/div[1]/div[3]/span[2]/strong[1]").text # PRECIO NORMAL
        print("Precio normal  "+elemnt2)
-       #time.sleep(2)
+      
        elemnt = driver.find_element(By.XPATH, "/html[1]/body[1]/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/ul[1]/li["+str(i)+"]/div[1]/div[3]/div[1]").text   # PRECIO OFERTA IBK  
        print("Precio IBK  "+elemnt)
-       #time.sleep(2)
+       
        elemnt4= driver.find_element(By.XPATH, "/html[1]/body[1]/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/ul[1]/li["+str(i)+"]/div[1]/div[3]/span[1]").text
-       print("Url   "+elemnt4) 
+       print("Precio Unico   "+elemnt4) 
    except:
        pass
              
@@ -71,6 +71,11 @@ def test(driver, numero_hoja):
    #print("imprime elemnto en celda   " +C+ "  " + elemnt3  )
    ws[D]=elemnt4 
    #print("imprime elemnto en celda   " +D+ "  " + elemnt4  )
+ driver.find_element(By.XPATH, "//body/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[9]/a[1]").click()
+ time.sleep(6)
    
+ 
+ 
  wb.save(filepath) 
- print("se graba exxcel")
+ print("se graba Excel")
+ 
