@@ -12,9 +12,9 @@ option = webdriver.ChromeOptions()
 option.add_argument('headless')
 driver = webdriver.Chrome("D:\\GIT\\SMC\\chromedriver.exe",options=option)
 driver.get("https://shopstar.pe/tecnologia/televisores")
-time.sleep(15)
+time.sleep(10)
 
-list =[1,2,3,4,5,6,7,8,9,10]
+list =[1]
 
 for idx, val in enumerate(list):
 
