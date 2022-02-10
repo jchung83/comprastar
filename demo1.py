@@ -52,6 +52,7 @@ def test(driver, numero_de_hoja):
  
    j +=1 # VAR QUE RECORRE LAS FILAS DEL EXCEL A1,B1,C1,D1 LUGEO A2,B2,C2,D2 ......
   
+   print(j)
    A="A"+str(j) # A1,A2,A3,A4,A5....
    B="B"+str(j)  # B1,B2,B3,B4,B5....
    C="C"+str(j)   # C1,C2,C3,C4,C5....
@@ -67,6 +68,7 @@ def test(driver, numero_de_hoja):
    #print("imprime elemnto en celda   " +C+ "  " + elemnt3  )
    ws[D]=elemnt4 
    #print("imprime elemnto en celda   " +D+ "  " + elemnt4  )
+   #------------------------ FIN ITERACION Y REGRESA 24 VECES ( 24 PRODUCTOS ) -----------------------------
  driver.find_element(By.XPATH, "//body/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[9]/a[1]").click() # le da next a la web  al final del bucle
  time.sleep(6)
    
