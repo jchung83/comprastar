@@ -8,9 +8,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import demo1
 
-option = webdriver.ChromeOptions()
-option.add_argument('headless')
-driver = webdriver.Chrome("D:\\GIT\\SMC\\chromedriver.exe",options=option)
+#option = webdriver.ChromeOptions()
+#option.add_argument('headless')
+#driver = webdriver.Chrome("D:\\GIT\\SMC\\chromedriver.exe",options=option)
+driver = webdriver.Chrome("D:\\GIT\\SMC\\chromedriver.exe")
+driver.maximize_window()
 driver.get("https://shopstar.pe/tecnologia/televisores")
 time.sleep(5)
 
