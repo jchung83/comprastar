@@ -12,7 +12,7 @@ driver = webdriver.Chrome("D:\\GIT\\SMC\\chromedriver.exe")
 
 
 
-
+ 
 
 def clicks():                           # FUNCIIONE DE CLICKS 
   for i in  range (1,11):
@@ -25,7 +25,7 @@ def urls(g):                             # FUNCION URL DE PAGIAN WEB
     print("esta es la variable que deberia crecer" +str(g))
     driver.get("https://shopstar.pe/tecnologia/televisores")
     time.sleep(15)
-    
+       
      
     time.sleep(6)
     
