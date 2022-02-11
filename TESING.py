@@ -3,4 +3,4 @@ def clicking(i,x):
       if i<x:
           print(i)
 
-clicking(1,2)
+clicking(1,3)

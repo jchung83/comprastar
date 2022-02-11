@@ -33,30 +33,37 @@ def clicking(i,x):
 
 
 def shopstar(i,x,j):
-
-    driver.get("https://shopstar.pe/tecnologia/televisores")
-    time.sleep(5)
+    
     clicking(i,x)
     time.sleep(4)
     demo1.test(driver,j)
 
+def shopstar_home(j):
+    
+       demo1.test(driver,j)
 
-shopstar(0,1,0)  # PAGINA INCIAL
-print("primera pagina")
-shopstar(1,2,24)  # SEGUNDA PAGINA
+driver.get("https://shopstar.pe/tecnologia/televisores")
+
+time.sleep(10)
+print("pagina Home")
+shopstar_home(0)
 print("segunda pagina")
-shopstar(1,3,48)   # TERCERAPAGINA
+shopstar(1,2,24)  # PAGINA INCIAL
 print("tercera pagina")
-shopstar(1,4,72) 
-print("tercera pagina")
-shopstar(1,5, 96)
+shopstar(1,3,48)  # SEGUNDA PAGINA
 print("cuarta pagina")
-shopstar(1,6,120)
+shopstar(1,4,72)   # TERCERAPAGINA
 print("quinta pagina")
+shopstar(1,5,96) 
+print("sexta pagina")
+shopstar(1,6, 120)
+print("septima pagina")
 shopstar(1,7,144)
+print("octava pagina")
 shopstar(1,8,168)
+print("novena pagina")
 shopstar(1,9,192)
+print("decima pagina")
 shopstar(1,10,216)
-shopstar(1,11,240)
 
 
