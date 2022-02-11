@@ -25,19 +25,37 @@ def clicking(i,x):
       if i<x:
         stop
         driver.find_element(By.XPATH, "//body/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[9]/a[1]").click()
-        time.sleep(2)
+        time.sleep(5)
 
       
 
 
 
 
-def shopstar(i,x):
+def shopstar(i,x,j):
 
     driver.get("https://shopstar.pe/tecnologia/televisores")
     time.sleep(5)
     clicking(i,x)
-    demo1.test(driver,0)
+    demo1.test(driver,j)
 
 
-shopstar(2,3)
+shopstar(0,0,0)  # PAGINA INCIAL
+print("primera pagina")
+shopstar(1,2,24)  # SEGUNDA PAGINA
+print("segunda pagina")
+shopstar(1,3,48)   # TERCERAPAGINA
+print("tercera pagina")
+shopstar(1,4,72) 
+print("tercera pagina")
+shopstar(1,5, 96)
+print("cuarta pagina")
+shopstar(1,6,120)
+print("quinta pagina")
+shopstar(1,7,144)
+shopstar(1,8,168)
+shopstar(1,9,192)
+shopstar(1,10,216)
+shopstar(1,11,240)
+
+

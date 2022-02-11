@@ -1,8 +1,6 @@
-def show_excitement(str,n):
-    if(n==0):
-        return str
-    else:
-        show_excitement(str,n-1)
+def clicking(i,x):
+  for i in range(1,10):
+      if i<x:
+          print(i)
 
-str="I am super excited for this course!"
-print show_excitement(str,5)
+clicking(1,2)

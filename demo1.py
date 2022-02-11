@@ -28,7 +28,7 @@ def test(driver, numero_de_hoja):
  driver.implicitly_wait(10)   
  time.sleep(2)   
 
- items = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 ] # numero de productos en la web
+ items = [ 1,2] # numero de productos en la web
  
  j= 24 * numero_de_hoja # ubica los 24 productos en las 24 filas del excel 
 
