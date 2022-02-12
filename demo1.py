@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 
-filepath = 'D:\GIT\shopstar\excel_data.xlsx' #  VARIABLE donde se ubica el excel
+filepath = 'D:\\GIT\\shopstar\\laptop.xlsx' #  VARIABLE donde se ubica el excel
 wb = load_workbook(filepath) # FUNCION OPENYXL Abre el excel
  
 
@@ -25,8 +25,8 @@ def test(driver, j):
  ws = wb[nombre_hoja]     # crea nombre de la hoja del excel
 
 
- driver.implicitly_wait(10)   
- time.sleep(2)   
+ driver.implicitly_wait(3)   
+ #time.sleep(2)   
 
  items = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24] # numero de productos en la web
  
@@ -51,10 +51,7 @@ def test(driver, j):
        print("Precio Unico   "+elemnt4) 
    except:
        pass
-             
-      
- 
-   
+                
    
 
    A="A"+str(j) # A1,A2,A3,A4,A5....
@@ -76,13 +73,7 @@ def test(driver, j):
    #---------------------------------------------------------------------------------------------------------------------------------------
    
 
-
-
-
- driver.find_element(By.XPATH, "//body/div[4]/div[2]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[9]/a[1]").click() # le da next a la web  al final del bucle
- time.sleep(30)
-   
  
- wb.save(filepath)  # SALVA EL ARCHIVO EXCEL
- print("se graba Excel")
+   wb.save(filepath)  # SALVA EL ARCHIVO EXCEL
+   print("se graba Excel")
  
